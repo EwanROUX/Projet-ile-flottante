@@ -1,0 +1,16 @@
+{
+    "name": "threejs-floating-island",
+    "version": "1.0.0",
+    "description": "Une île flottante en Three.js avec une maison et un arbre",
+    "main": "script.js",
+    "scripts": {
+        "dev": "vite"
+    },
+    "dependencies": {
+        "lil-gui": "^0.20.0",
+        "three": "^0.160.1"
+    },
+    "devDependencies": {
+        "vite": "^5.0.0"
+    }
+}
