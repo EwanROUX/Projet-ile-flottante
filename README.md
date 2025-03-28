@@ -1,75 +1,68 @@
-🌍 Projet Île Flottante - Three.js
+🌍 Floating Island Project - Three.js
 
-Ce projet est une scène interactive en 3D réalisée avec Three.js, où une île flottante est explorée par un personnage zombie. Le joueur peut se déplacer sur l'île et tomber en dehors si il quitte la zone jouable.
+This project is an interactive 3D scene created with Three.js, where a floating island is explored by a zombie character. The player can move around the island and fall off if they leave the playable area.
 
-🔧 Comment refaire ce projet de A à Z ?
+🔧 How to Rebuild This Project from Scratch?
+If you want to rebuild this project on your machine, here’s a detailed guide to install and configure everything correctly.
 
-Si tu veux refaire ce projet sur ta machine, voici un guide détaillé pour tout installer et configurer correctement.
-
-1️⃣ Installer Node.js et npm
-
-D'abord, assure-toi d'avoir Node.js installé sur ton ordinateur. Pour vérifier, vas dans ton Terminal et tape ceci :
+1️⃣ Install Node.js and npm
+First, make sure you have Node.js installed on your computer. To check, go to your terminal and type the following:
 
 node -v
 npm -v
 
-Si ce n’est pas installé, télécharge et installe Node.js via ton navigateur 
+If it’s not installed, download and install Node.js via your browser from here.
 
-2️⃣ Créer un dossier et initialiser un projet
-
-Ouvre ton Terminal et exécute les commandes suivantes :
+2️⃣ Create a Folder and Initialize a Project
+Open your terminal and run the following commands:
 
 mkdir Projet-ile-flottante
 cd Projet-ile-flottante
 npm init -y
 
-Cela va créer un dossier et générer un fichier package.json.
+This will create a folder and generate a package.json file.
 
-3️⃣ Installer Three.js et les dépendances
+3️⃣ Install Three.js and Dependencies
+In the project folder, install Three.js using npm in your terminal:
 
-Dans le dossier du projet, installe Three.js avec npm sur ton Terminal :
 
 npm install three
 
-Sur ton Terminal, on installe aussi un serveur de développement pour voir les changements en direct :
+In your terminal, we also install a development server to see the changes live:
 
 npm install vite --save-dev
 
-4️⃣ Créer la structure du projet sur VSCode : 
-
-Dans le dossier Projet-ile-flottante, crée cette arborescence :
+4️⃣ Create the Project Structure in VSCode
+In the Projet-ile-flottante folder, create the following structure:
 
 Projet-ile-flottante/
-│── assets/            → Contiendra les fichiers statiques (modèles 3D, images)
-│── node_modules/      → Dépendances installées avec npm
-│── index.html         → Page principale
-│── package.json       → Fichier de configuration npm
-│── package-lock.json  → Verrouillage des versions des dépendances
-│── script.js          → Script principal contenant le code JavaScript
-│── style.css          → Feuille de styles pour l'interface
+│── assets/            → Will contain static files (3D models, images)
+│── node_modules/      → Dependencies installed with npm
+│── index.html         → Main page
+│── package.json       → npm configuration file
+│── package-lock.json  → Locks the versions of the dependencies
+│── script.js          → Main script containing JavaScript code
+│── style.css          → Stylesheet for the interface
 
-5️⃣ Ajouter Three.js au projet
+5️⃣ Add Three.js to the Project
+In script.js, add my code provided in the attached code.
 
-Dans script.js, ajoute mon code situé dans le code ci-joint :
+6️⃣ Run the Project
+Copy my package.json code to start the server with Vite.
 
-6️⃣ Lancer le projet
-
-Recopie mon code package.json pour pouvoir démarrer le serveur avec Vite :
-
-Puis, démarre le projet avec ceci dans ton Terminal :
+Then, start the project with this command in your terminal:
 
 npm run dev
-Tu devrais voir la scène Three.js s'afficher dans ton navigateur ! 🚀
 
-7️⃣ Ajouter un modèle 3D et gérer les déplacements
+You should see the Three.js scene appear in your browser! 🚀
 
-Tu peux ajouter des modèles 3D .glb en utilisant un GLTFLoader. Installe le loader dans ton Terminal avec :
+7️⃣ Add a 3D Model and Handle Movements
+You can add .glb 3D models using a GLTFLoader. Install the loader in your terminal with:
 
 npm install three/examples/jsm/loaders/GLTFLoader.js
+In script.js, load a 3D model like this:
 
-Dans script.js, charge un modèle 3D comme dans mon code script.js :
-
-Exemple : 
+Example:
 
 // Load the GLB model for the fantasy house
 loader.load('assets/fantasy_floating_island.glb', (gltf) => {
@@ -82,9 +75,9 @@ loader.load('assets/fantasy_floating_island.glb', (gltf) => {
     console.error('Fantasy Island loading error:', error);
 });
 
-Ajoute ensuite un système de déplacements pour le zombie :
+Next, add a movement system for the zombie:
 
-Exemple : 
+Example:
 
 // Manage movements with the directional keys
 window.addEventListener('keydown', (event) => {
@@ -104,36 +97,34 @@ window.addEventListener('keydown', (event) => {
     }
 });
 
-8️⃣ Détecter le sol avec Raycaster
+8️⃣ Detect the Ground with Raycaster
+To prevent the zombie from floating or falling into the void, use a Raycaster by copying it from my code.
 
-Pour éviter que le zombie flotte ou tombe dans le vide, utilise un Raycaster en recopiant celui dans mon code
+Add checkGround() to the animate() loop to check the zombie’s position in real-time.
 
-Ajoute checkGround() dans la boucle animate() pour vérifier la position du zombie en temps réel
+✅ Summary of Main Commands
+Action	                  │      Command
 
-✅ Résumé des commandes principales
+Install dependencies	  │      npm install
+Run the project	          │      npm run dev
+Compile and optimize	  │      npm run build
 
-Action	                     │     Commande
-Installer les dépendances	 │     npm install
-Lancer le projet	         │     npm run dev
-Compiler et optimiser	     │     npm run build
+What You Will Learn
 
-Ce que tu apprendras : 
+🏗️ Structure a Three.js project
 
-🏗️ Structurer un projet Three.js
+🎮 Manage a character’s movement in 3D
 
-🎮 Gérer les déplacements d’un personnage en 3D
+⚡ Load and display .glb models
 
-⚡ Charger et afficher des modèles .glb
+🛠️ Use a Raycaster to detect the ground
 
-🛠️ Utiliser un Raycaster pour détecter le sol
-
-Auteur
-
+🏆 Author
 👨‍💻 Ewan Roux
 🔗 [LinkedIn](https://www.linkedin.com/in/ewan-roux-a737922a4/)
 📌 [GitHub](https://github.com/EwanROUX/Projet-ile-flottante/edit/master/README.md)
 
-📜 Licence
-Ce projet est sous licence MIT. Tu peux l'utiliser librement pour apprendre et créer tes propres scènes 3D !
+📜 License
+This project is under the MIT license. You can freely use it to learn and create your own 3D scenes!
 
-💡 Amuse-toi bien avec Three.js ! 🎮🚀
+💡 Have fun with Three.js! 🎮🚀
