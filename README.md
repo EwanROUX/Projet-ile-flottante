@@ -9,7 +9,7 @@ Fonctionnalités 🚀
 • Design adaptatif : Le projet s’adapte à différents écrans, avec une mise en page responsive.
 
 Aperçu 📸
-Voici un aperçu du projet : https://github.com/EwanROUX/Projet-ile-flottante.git
+Voici un aperçu du projet : http://localhost:5173
 
 Structure des fichiers 📂
 • index.html : Contient la structure HTML du projet et la mise en place de Three.js.
