@@ -23,6 +23,8 @@ Technologies utilisées 🛠️
 • HTML5 : Pour la structure du projet.
 • CSS3 : Pour les styles et l'ajustement visuel de l'interface.
 • WebGL : Pour l’affichage graphique en 3D via Three.js.
+. package.json : Fichier de configuration pour les dépendances du projet Node.js.
+• node_modules/ : Dossier contenant les modules installés via npm.
 
 Enseignements 📚
 • Utilisation de Three.js pour générer et manipuler des scènes 3D.
@@ -31,7 +33,7 @@ Enseignements 📚
 • Optimisation des fichiers 3D et gestion des assets volumineux dans GitHub.
 
 Auteur
-Ewan Roux | LinkedIn
+Ewan Roux | [LinkedIn](https://www.linkedin.com/in/ewan-roux-a737922a4/)
 
 Licence 📄
 Ce projet est sous licence MIT. Vous êtes libre d’utiliser, de modifier et de distribuer le code avec attribution.
