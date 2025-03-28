@@ -112,7 +112,7 @@ Ajoute checkGround() dans la boucle animate() pour vérifier la position du zomb
 
 ✅ Résumé des commandes principales
 
-Action	                   │     Commande
+Action	                     │     Commande
 Installer les dépendances	 │     npm install
 Lancer le projet	         │     npm run dev
 Compiler et optimiser	     │     npm run build
